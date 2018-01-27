@@ -1,4 +1,5 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@page import="com.hfh.utils.MyConstant"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.Random"%>
 <%@ page import="java.io.OutputStream"%>
@@ -30,7 +31,7 @@
 	}
 	// generate a random code
 	String capstr = hash1.substring(0, 4);
-	session.setAttribute("key", capstr);
+	session.setAttribute(MyConstant.VALIDATE_CODE, capstr);
 	g.setColor(new Color(0, 100, 0));
 	g.setFont(new Font("Candara", Font.BOLD, 24));
 	g.drawString(capstr, 8, 24);
