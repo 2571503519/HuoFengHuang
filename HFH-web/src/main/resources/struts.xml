@@ -8,15 +8,40 @@
 		<constant name="struts.objectFactory" value="spring"/>
 	 -->
 	<package name="basicstruts2" extends="struts-default">
+		<interceptors>
+			<!-- 注册自己的拦截器 -->
+			<interceptor name="hfhLoginInterceptor" class="com.hfh.web.interceptor.HFHLoginInterceptor">
+				<!-- 指定不拦截的方法 -->
+				<param name="excludeMethods">login</param>
+			</interceptor>
+			<!-- 自定义拦截器栈 -->
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="hfhLoginInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<!-- 指定默认拦截器栈 -->
+		<default-interceptor-ref name="myStack"></default-interceptor-ref>
+		<!-- 全局结果集定义 -->
+		<global-results>
+			<result name="login">/login.jsp</result>
+		</global-results>
+		
+		
 		<!-- 需要进行权限控制的页面访问 -->
 		<action name="page_*_*">
 			<result type="dispatcher">/WEB-INF/pages/{1}/{2}.jsp</result>
 		</action>
-		
 		<!-- 用户管理 -->
 		<action name="userAction_*" class="userAction" method="{1}">
 			<result name="login">/login.jsp</result>
 			<result name="home">/index.jsp</result>
+		</action>
+		<!-- 管理员管理 -->
+		<action name="adminAction_*" class="adminAction" method="{1}">
+			<result name="login">/login.jsp</result>
+			<result name="home">/index.jsp</result>
+			<result name="list">/page_base_admin</result>
 		</action>
 	</package>
 </struts>

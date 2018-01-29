@@ -9,5 +9,5 @@ public class MyConstant {
 	
 	public static final String VALIDATE_CODE = "validateCode";
 	public static final String LOGINED_USER = "loginedUser";
-	
+	public static final String LOGINED_ADMIN = "loginedAdmin";
 }	
