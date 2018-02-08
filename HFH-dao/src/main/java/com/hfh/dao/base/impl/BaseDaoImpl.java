@@ -71,31 +71,42 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 
 	@Override
 	public void executeUpdate(String queryName, Object... objects) {
+		// 获取当前线程相关联的session
 		Session session = this.getSessionFactory().getCurrentSession();
+		// 获取在hbm文件中设置的SQL语句
 		Query query = session.getNamedQuery(queryName);
+		// 设置参数
 		int i = 0;
 		for (Object object : objects) {
 			query.setParameter(i++, object);
 		}
+		// 执行
 		query.executeUpdate();
 	}
 
 	@Override
 	public void pageQuery(PageBean pageBean) {
+		// 获取当前页、页面显示条数、离线查询对象
 		int currentPage = pageBean.getCurrentPage();
 		int pageSize = pageBean.getPageSize();
 		DetachedCriteria detachedCriteria = pageBean.getDetachedCriteria();
-		
+		// 设置聚合函数，查询总记录数，并设置到pageBean中
 		detachedCriteria.setProjection(Projections.rowCount());
 		List<Long> countList = (List<Long>) this.getHibernateTemplate().findByCriteria(detachedCriteria);
 		Long count = countList.get(0);
 		pageBean.setTotal(count.intValue());
+		// 清空设置的聚合函数
 		detachedCriteria.setProjection(null);
-		
+		// 设置分页查询条件，查询分页数据，并设置到pageBean中
 		int firstResult = (currentPage -1) * pageSize;
 		int maxResults = pageSize;
 		List rows = this.getHibernateTemplate().findByCriteria(detachedCriteria, firstResult, maxResults);
 		pageBean.setRows(rows);
+	}
+
+	@Override
+	public void saveOrUpdate(T entity) {
+		this.getHibernateTemplate().saveOrUpdate(entity);
 	}
 
 	

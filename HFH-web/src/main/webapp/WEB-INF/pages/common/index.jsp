@@ -41,7 +41,7 @@
 			}
 		};
 		
-		// 基本功能菜单加载
+		// 基本功能菜单加载，这里将菜单数据都设置在静态的menu.json文件中了
 		$.ajax({
 			url : '${pageContext.request.contextPath}/json/menu.json',
 			type : 'POST',
@@ -266,6 +266,7 @@
                </form>
             </div>
             <div region="south" border="false" style="text-align: right; height: 30px; line-height: 30px;">
+            	<!-- 表单的提交在js代码中执行 -->
                 <a id="btnEp" class="easyui-linkbutton" icon="icon-ok" href="javascript:void(0)" >确定</a> 
                 <a id="btnCancel" class="easyui-linkbutton" icon="icon-cancel" href="javascript:void(0)">取消</a>
             </div>

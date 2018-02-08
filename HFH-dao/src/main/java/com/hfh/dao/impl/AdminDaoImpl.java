@@ -14,6 +14,7 @@ public class AdminDaoImpl extends BaseDaoImpl<Admin> implements AdminDao {
 
 	@Override
 	public Admin findAdminByUsernameAndPassword(String username, String password) {
+		// 用户名、密码都正确，并且账户处于启用状态，才能查询成功
 		String hql = "FROM Admin a WHERE a.username = ? AND a.password = ? AND a.status = 1";
 		List<Admin> list = (List<Admin>) this.getHibernateTemplate().find(hql, username, password);
 		if (list != null && list.size() > 0) {

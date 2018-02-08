@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+   
+<hibernate-mapping>
+	<class name="com.hfh.domain.CommonSense" table="common_sense">
+		<id name="sense_id">
+			<generator class="native"/>			
+		</id>
+		<property name="sense_title"/>
+		<property name="sense_content"/>
+		<property name="create_time"/>
+		<property name="update_time"/>
+		<property name="status"/>
+		
+	</class>
+	<query name="commonSense.delete">
+		UPDATE CommonSense c SET c.status = -1 WHERE c.sense_id = ?
+	</query>
+	<query name="commonSense.publish">
+		UPDATE CommonSense c SET c.status = 1 WHERE c.sense_id = ?
+	</query>
+	<query name="commonSense.revoke">
+		UPDATE CommonSense c SET c.status = 0 WHERE c.sense_id = ?
+	</query>
+</hibernate-mapping>

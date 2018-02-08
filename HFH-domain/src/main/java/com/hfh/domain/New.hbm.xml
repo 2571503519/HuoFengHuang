@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+   
+<hibernate-mapping>
+	<class name="com.hfh.domain.New" table="news">
+		<id name="new_id">
+			<generator class="native"/>			
+		</id>
+		<property name="new_title"/>
+		<property name="new_content"/>
+		<property name="author"/>
+		<property name="source"/>
+		<property name="create_time"/>
+		<property name="update_time"/>
+		<property name="status"/>
+		
+	</class>
+	<query name="new.publish">
+		UPDATE New n SET n.status = 1 WHERE n.new_id = ?
+	</query>
+	<query name="new.revoke">
+		UPDATE New n SET n.status = 0 WHERE n.new_id = ?
+	</query>
+	<query name="new.delete">
+		UPDATE New n SET n.status = -1 WHERE n.new_id = ?
+	</query>
+</hibernate-mapping>

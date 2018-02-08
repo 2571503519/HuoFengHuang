@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+   
+<hibernate-mapping>
+	<class name="com.hfh.domain.Volunteer" table="volunteers">
+		<id name="vol_id" type="java.lang.Long">
+			<generator class="native"/>			
+		</id>
+		<property name="vol_name"/>
+		<property name="vol_IDCard"/>
+		<property name="live_url"/>
+		<property name="province"/>
+		<property name="city"/>
+		<property name="county"/>
+		<property name="town"/>
+		<property name="addr_detail"/>
+		<property name="reg_time"/>
+		<property name="status"/>
+		<set name="actVols" lazy="false" table="act_vol" cascade="save-update">
+			<key column="vol_id"></key>
+			<one-to-many class="com.hfh.domain.ActivityVolunteer"></one-to-many>
+		</set>
+	</class>
+	<query name="volunteer.publish">
+		UPDATE Volunteer v SET v.status = 1 WHERE v.vol_id = ?
+	</query>
+	<query name="volunteer.revoke">
+		UPDATE Volunteer v SET v.status = 0 WHERE v.vol_id = ?
+	</query>
+	<query name="volunteer.delete">
+		UPDATE Volunteer v SET v.status = -1 WHERE v.vol_id = ?
+	</query>
+</hibernate-mapping>

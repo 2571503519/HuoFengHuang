@@ -77,14 +77,18 @@ public class AdminAction extends BaseAction<Admin> {
 	}
 	
 	public String editPassword() throws IOException {
-		String flag = "1";
+		// 修改用户密码是否成功的标志
+		String flag = MyConstant.EDIT_ADMIN_SUCCESS;
+		// 获取登录的用户
 		Admin admin = HFHUtils.getLoginedAdmin();
 		try {
 			adminService.editPassword(admin.getAdmin_id(), model.getPassword());
 		} catch (Exception e) {
-			flag = "0";
+			// 修改失败
+			flag = MyConstant.EDIT_ADMIN_FAIL;
 			e.printStackTrace();
 		}
+		// 修改成功，并返回修改成功的标志
 		ServletActionContext.getResponse().setContentType("text/html;charset=utf-8");
 		ServletActionContext.getResponse().getWriter().print(flag);
 		return NONE;
@@ -111,17 +115,29 @@ public class AdminAction extends BaseAction<Admin> {
 		return NONE;
 	}
 	
+	/**
+	 * 添加管理员
+	 * @return
+	 */
 	public String add() {
-		
-		if (model.getStatus() != 1) {
-			model.setStatus(0);
+		// 由于前端是通过checkbox传来的参数，所以当用户不启用时是没有status参数的，所以手动判断添加
+		if (model.getStatus() != MyConstant.ADMIN_STATUS_ENABLE) {
+			model.setStatus(MyConstant.ADMIN_STATUS_DISABLE);
 		}
+		// 设置管理员创建时间
 		model.setCreate_time(new Date());
+		// 保存
 		adminService.save(model);
+		// 返回管理员列表
 		return LIST;
 	}
 	
+	/**
+	 * 批量删除
+	 * @return
+	 */
 	public String deleteBatch() {
+		// ids为多个id以字符串形式传来，例如："1,2,3,4"
 		adminService.deleteBatch(ids);
 		return LIST;
 	}

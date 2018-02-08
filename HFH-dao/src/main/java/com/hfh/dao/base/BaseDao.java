@@ -22,8 +22,10 @@ public interface BaseDao<T> {
 	T findById(Serializable id);
 	// 查询所有
 	List<T> findAll();
-	
+	// 执行更新，执行在hbm文件中设置的SQL语句，并设置参数
 	void executeUpdate(String queryName, Object...objects);
-	
+	// 分页查询
 	void pageQuery(PageBean pageBean);
+	
+	void saveOrUpdate(T entity);
 }

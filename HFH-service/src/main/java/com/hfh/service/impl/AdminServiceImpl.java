@@ -31,6 +31,7 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public void editPassword(Long admin_id, String password) {
 		password = MD5Util.md5(password);
+		// 执行在hbm文件中设置好的SQL语句，并设置参数
 		adminDao.executeUpdate("admin.editpassword", password, admin_id);
 	}
 
@@ -50,9 +51,13 @@ public class AdminServiceImpl implements AdminService {
 
 	@Override
 	public void deleteBatch(String ids) {
+		// 判断ids是否为空
 		if (StringUtils.isNotBlank(ids)) {
+			// 将"1,2,3,4"这样形式的多个id，分割成字符串数组的形式
 			String[] adminIds = ids.split(",");
+			// 遍历数组，循环删除
 			for (String id : adminIds) {
+				// 由于传来的id是字符串的形式，所以这里需要类型转换
 				adminDao.executeUpdate("admin.delete", Long.parseLong(id));
 			}
 		}

@@ -42,7 +42,7 @@
 		console.log(rows);
 		if(rows.length == 0){
 			//没有选中记录，弹出提示
-			$.messager.alert("提示信息","请选择需要关闭的管理员！","warning");
+			$.messager.alert("提示信息","请选择需要禁用的管理员！","warning");
 		}else{
 			//选中了管理员,弹出确认框
 			$.messager.confirm("删除确认","你确定要关闭选中的管理员吗？",function(r){

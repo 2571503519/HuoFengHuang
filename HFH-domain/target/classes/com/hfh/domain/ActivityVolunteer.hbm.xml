@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+   
+<hibernate-mapping>
+	<class name="com.hfh.domain.ActivityVolunteer" table="act_vol">
+		<id name="id" type="java.lang.Long">
+			<generator class="native"/>			
+		</id>
+		<property name="create_time"/>
+		<property name="status"/>
+		<many-to-one lazy="false" name="volunteer" class="com.hfh.domain.Volunteer" column="vol_id"></many-to-one>
+		<many-to-one lazy="false" name="activity" class="com.hfh.domain.Activity" column="act_id"></many-to-one>
+	</class>
+</hibernate-mapping>

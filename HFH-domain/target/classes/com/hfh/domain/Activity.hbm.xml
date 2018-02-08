@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+   
+<hibernate-mapping>
+	<class name="com.hfh.domain.Activity" table="activity">
+		<id name="act_id" type="java.lang.Long">
+			<generator class="native"/>			
+		</id>
+		<property name="act_title"/>
+		<property name="act_content"/>
+		<property name="act_addr"/>
+		<property name="sponsor"/>
+		<property name="live_url"/>
+		<property name="start_time"/>
+		<property name="end_time"/>
+		<property name="create_time"/>
+		<property name="update_time"/>
+		<property name="status"/>
+		
+		<set name="actVols" lazy="false" table="act_vol" cascade="save-update">
+			<key column="act_id"></key>
+			<one-to-many class="com.hfh.domain.ActivityVolunteer"></one-to-many>
+		</set>
+	</class>
+	<query name="activity.publish">
+		UPDATE Activity a SET a.status = 1 WHERE a.act_id = ?
+	</query>
+	<query name="activity.revoke">
+		UPDATE Activity a SET a.status = 0 WHERE a.act_id = ?
+	</query>
+	<query name="activity.delete">
+		UPDATE Activity a SET a.status = -1 WHERE a.act_id = ?
+	</query>
+	<query name="activityVolunteer.approval">
+		UPDATE ActivityVolunteer act_vol SET act_vol.status = 1 WHERE act_vol.id = ?
+	</query>
+	<query name="activityVolunteer.refuse">
+		UPDATE ActivityVolunteer act_vol SET act_vol.status = -1 WHERE act_vol.id = ?
+	</query>
+</hibernate-mapping>

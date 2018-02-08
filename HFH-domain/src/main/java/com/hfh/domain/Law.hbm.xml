@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+   
+<hibernate-mapping>
+	<class name="com.hfh.domain.Law" table="law">
+		<id name="law_id">
+			<generator class="native"/>			
+		</id>
+		<property name="law_title"/>
+		<property name="law_content"/>
+		<property name="create_time"/>
+		<property name="update_time"/>
+		<property name="status"/>
+		
+	</class>
+	<query name="law.delete">
+		UPDATE Law law SET law.status = -1 WHERE law.law_id = ?
+	</query>
+	<query name="law.publish">
+		UPDATE Law law SET law.status = 1 WHERE law.law_id = ?
+	</query>
+	<query name="law.revoke">
+		UPDATE Law law SET law.status = 0 WHERE law.law_id = ?
+	</query>
+</hibernate-mapping>
