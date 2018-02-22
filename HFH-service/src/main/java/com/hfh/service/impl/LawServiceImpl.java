@@ -24,12 +24,12 @@ public class LawServiceImpl implements LawService {
 
 	@Override
 	public void revokeLaws(String ids) {
-		changeNewsStatus(ids, "law.publish");
+		changeNewsStatus(ids, "law.revoke");
 	}
 
 	@Override
 	public void publishLaws(String ids) {
-		changeNewsStatus(ids, "law.revoke");
+		changeNewsStatus(ids, "law.publish");
 	}
 
 	@Override

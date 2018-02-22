@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.hfh.domain">
+	<!-- CREATE TABLE `candidates` (
+	  `cand_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+	  `cand_name` varchar(50) NOT NULL,
+	  `cand_username` varchar(50) NOT NULL,
+	  `cand_date` datetime NOT NULL,
+	  PRIMARY KEY (`cand_id`)
+	) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8; -->
+	<class name="Candidate" table="candidates">
+		<id name="cand_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="cand_name" column="cand_name"></property>
+		<property name="cand_username" column="cand_username"></property>
+		<property name="cand_date" column="cand_date"></property>
+		<property name="cand_grade" column="cand_grade"></property>
+		
+		<set name="candAnswers"  cascade="save-update" inverse="true">
+			<key column="cand_id"></key>
+			<one-to-many class="com.hfh.domain.CandAnswer"/>
+		</set>
+	</class>
+	<query name="candidate.delete">
+		DELETE Candidate c WHERE c.cand_id = ?
+	</query>
+</hibernate-mapping>
+
+

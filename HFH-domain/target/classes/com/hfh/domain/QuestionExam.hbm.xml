@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.hfh.domain">
+	<class name="QuestionExam" table="questions_exam">
+		<id name="exam_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="exam_weights"></property>
+		<property name="exam_sequence"></property>
+		<property name="quest_id"></property>
+		<property name="paper_id"></property>	
+	</class>
+</hibernate-mapping>    
+    
+    

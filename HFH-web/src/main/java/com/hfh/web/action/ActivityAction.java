@@ -137,7 +137,8 @@ public class ActivityAction extends BaseAction<Activity> {
 	public String approval() {
 		System.out.println(actVol_id);
 		activityService.approval(actVol_id);
-		String json = "{status:" + MyConstant.ADD_NEW_SUCCESS +"}";
+		String json = "{\"status\":" + MyConstant.ADD_NEW_SUCCESS +"}";
+		System.out.println(json);
 		ServletActionContext.getResponse().setContentType("text/json;charset=utf-8");
 		try {
 			ServletActionContext.getResponse().getWriter().print(json);

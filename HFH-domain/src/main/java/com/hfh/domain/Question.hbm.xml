@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.hfh.domain">
+	<!-- CREATE TABLE `questions` (
+	  `quest_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+	  `quest_content` text NOT NULL COMMENT '题目的内容',
+	  `quest_result` varchar(255) NOT NULL COMMENT '题目的答案',
+	  `quest_type` tinyint(1) unsigned NOT NULL DEFAULT '1',
+	  `quest_status` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '是否被选作考题',
+	  PRIMARY KEY (`quest_id`)
+	) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8; -->
+	<class name="Question" table="questions">
+		<id name="quest_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="quest_content" column="quest_content"></property>
+		<property name="quest_result" column="quest_result"></property>
+		<property name="quest_type" column="quest_type"></property>
+		<property name="quest_status" column="quest_status"></property>	
+	</class>
+	<query name="question.delete">
+		UPDATE Question q SET q.quest_status = -1 WHERE q.quest_id = ?
+	</query>
+	<query name="question.publish">
+		UPDATE Question q SET q.quest_status = 1 WHERE q.quest_id = ?
+	</query>
+	<query name="question.revoke">
+		UPDATE Question q SET q.quest_status = 0 WHERE q.quest_id = ?
+	</query>
+</hibernate-mapping>    
+    
+    

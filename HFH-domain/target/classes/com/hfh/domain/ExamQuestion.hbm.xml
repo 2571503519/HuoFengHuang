@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.hfh.domain">
+	
+	<!-- CREATE TABLE `exam_questions` (
+	  `exam_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+	  `quest_id` int(11) unsigned NOT NULL,
+	  `paper_id` int(11) unsigned NOT NULL,
+	  `exam_weights` tinyint(3) unsigned DEFAULT '5' COMMENT '分值',
+	  `exam_sequence` tinyint(3) unsigned NOT NULL,
+	  PRIMARY KEY (`exam_id`),
+	  KEY `fk_paper_id` (`paper_id`),
+	  CONSTRAINT `fk_paper_id` FOREIGN KEY (`paper_id`) REFERENCES `papers_exam` (`paper_id`) ON DELETE NO ACTION ON UPDATE CASCADE
+	) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='考卷中的考题表'; -->
+	
+	<class name="ExamQuestion" table="questions_exam">
+		<id name="exam_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="exam_weights" column="exam_weights"></property>
+		<property name="exam_sequence" column="exam_sequence"></property>
+		<many-to-one name="question" column="quest_id" class="com.hfh.domain.Question" unique="true">
+		</many-to-one>
+		<many-to-one name="paper_exam" column="paper_id" class="com.hfh.domain.PaperExam" >
+		</many-to-one>
+	</class>
+	
+</hibernate-mapping>
+
+
+
+
+

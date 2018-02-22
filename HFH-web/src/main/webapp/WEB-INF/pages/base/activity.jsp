@@ -175,17 +175,16 @@
 		$.post("activityAction_approval.action", 
 				{"actVol_id": id},
 				function(data) {
-					console.log(data);
-					/*if (data.status == 1) {
+					if (data.status == 1) {
 						$("#volunteer" + vol_id).html("已批准");
 					} else {
 						$.messager.alert("批准申请失败");
-					}*/
+					}
 				}, 
 				"json");
-		$("#volunteer" + vol_id).html("已批准");
 	}
 	
+	/* 列出所有申请 */
 	function activityApplyDetail() {
 		var rows = $("#grid").datagrid("getSelections");
 		if (rows.length == 0) {
@@ -201,7 +200,7 @@
 					for (var i = 0; i < data.length; i++) {
 						if (data[i].status == 0) {
 							$("#applyDetail")
-								.append("<tr><td>" + data[i].volunteer.vol_name +"</td><td>" + dateTransfer(data[i].create_time.time) +"</td><td><button id='volunteer" + data[i].volunteer.vol_id +"' onclick='approval(" + data[i].id + ", " +　data[i].volunteer.vol_id +");'>批准申请</button></td></tr>");
+								.append("<tr><td>" + data[i].volunteer.vol_name +"</td><td>" + dateTransfer(data[i].create_time.time) +"</td><td><button id='volunteer" + data[i].volunteer.vol_id +"' onclick='approval(" + data[i].id + ", " + data[i].volunteer.vol_id +");'>批准申请</button></td></tr>");
 						} else if (data[i].status == 1) {
 							$("#applyDetail")
 								.append("<tr><td>" + data[i].volunteer.vol_name +"</td><td>" + dateTransfer(data[i].create_time.time) +"</td><td><button id='volunteer" + data[i].id +" disabled='disabled'>已批准</button></td></tr>");

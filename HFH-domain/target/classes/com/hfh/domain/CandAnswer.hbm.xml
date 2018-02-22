@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.hfh.domain">
+	
+	<!-- CREATE TABLE `cand_answers` (
+	  `answer_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+	  `answer_result` varchar(255) DEFAULT NULL,
+	  `quest_id` int(11) unsigned NOT NULL,
+	  `cand_id` int(11) unsigned NOT NULL,
+	  PRIMARY KEY (`answer_id`),
+	  KEY `fk_cand_id` (`cand_id`),
+	  CONSTRAINT `fk_cand_id` FOREIGN KEY (`cand_id`) REFERENCES `candidates` (`cand_id`) ON DELETE NO ACTION ON UPDATE CASCADE,
+	) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8; -->
+	
+	<class name="CandAnswer" table="cand_answers">
+		
+		<id name="answer_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="answer_result" column="answer_result"></property>
+		<property name="correct" column="correct"></property>
+		<many-to-one name="examQuestion" column="exam_id" class="com.hfh.domain.ExamQuestion" unique="true">
+		</many-to-one>
+		<many-to-one name="candidate" column="cand_id" class="com.hfh.domain.Candidate" >
+		</many-to-one>
+	</class>
+	
+</hibernate-mapping>
+
+
+
+
+

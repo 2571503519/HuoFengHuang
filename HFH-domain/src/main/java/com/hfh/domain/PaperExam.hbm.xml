@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.hfh.domain">
+	
+	<!-- CREATE TABLE `papers_exam` (
+	  `paper_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+	  `paper_name` varchar(60) NOT NULL,
+	  `selected` tinyint(1) unsigned DEFAULT '1' COMMENT '是否被选作为考试用卷',
+	  PRIMARY KEY (`paper_id`)
+	) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8; -->
+	
+	<class name="PaperExam" table="papers_exam">
+		
+		<id name="paper_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="paper_name" column="paper_name"></property>
+		<property name="selected" column="selected"></property>
+		
+		<set name="exam_questions"  cascade="save-update" inverse="true">
+			<key column="paper_id"></key>
+			<one-to-many class="com.hfh.domain.ExamQuestion"/>
+		</set>
+	</class>
+	<query name="paperExam.publish">
+		UPDATE PaperExam p SET p.selected = 1 WHERE p.paper_id = ?
+	</query>
+	<query name="paperExam.revoke">
+		UPDATE PaperExam p SET p.selected = 0 WHERE p.paper_id = ?
+	</query>
+</hibernate-mapping>    
+    

@@ -73,5 +73,23 @@
 			<result name="home">/index.jsp</result>
 			<result name="list">/page_base_volunteer</result>
 		</action>
+		<!-- 题库管理 -->
+		<action name="questionAction_*" class="questionAction" method="{1}">
+			<result name="login">/login.jsp</result>
+			<result name="home">/index.jsp</result>
+			<result name="list">/page_exam_question</result>
+		</action>
+		<!-- 考卷管理 -->
+		<action name="paperExamAction_*" class="paperExamAction" method="{1}">
+			<result name="login">/login.jsp</result>
+			<result name="home">/index.jsp</result>
+			<result name="list">/page_exam_paperExam</result>
+		</action>
+		<!-- 考生管理 -->
+		<action name="candidateAction_*" class="candidateAction" method="{1}">
+			<result name="login">/login.jsp</result>
+			<result name="home">/index.jsp</result>
+			<result name="list">/page_exam_candidate</result>
+		</action>
 	</package>
 </struts>
