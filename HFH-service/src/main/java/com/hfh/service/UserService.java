@@ -14,5 +14,7 @@ public interface UserService {
 	 * @return 从数据库查询并返回的用户对象，存在则代表登录成功，否则登录失败
 	 */
 	User login(User user);
+
+	int register(User user);
 	
 }

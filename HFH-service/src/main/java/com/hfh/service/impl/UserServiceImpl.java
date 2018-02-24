@@ -25,4 +25,17 @@ public class UserServiceImpl implements UserService {
 		return userDao.findUserByUsernameAndPassword(user.getUsername(), password);
 	}
 
+
+	@Override
+	public int register(User user) {
+		User existedUser = userDao.findUserByUsername(user.getUsername());
+		if (existedUser != null) {
+			return 0; // 用户名已被注册
+		} else {
+			user.setPassword(MD5Util.md5(user.getPassword()));
+			userDao.save(user);
+			return 1; // 用户注册成功
+		}
+	}
+
 }

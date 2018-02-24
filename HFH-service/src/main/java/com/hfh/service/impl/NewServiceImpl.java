@@ -1,5 +1,7 @@
 package com.hfh.service.impl;
 
+import java.util.List;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -59,6 +61,12 @@ public class NewServiceImpl implements NewService {
 	@Override
 	public void update(New model) {
 		newDao.update(model);
+	}
+
+	@Override
+	public List<New> findLatestNews() {
+		// 查询最近添加的5条新闻
+		return newDao.findOrdeByCreateTime(5);
 	}
 
 }

@@ -16,5 +16,7 @@ public interface UserDao extends BaseDao<User> {
 	 * @return User:数据库中查找出来的用户对象，null:数据库中不存在改用户
 	 */
 	User findUserByUsernameAndPassword(String username, String password);
+
+	User findUserByUsername(String username);
 	
 }

@@ -32,6 +32,25 @@
 		<action name="page_*_*">
 			<result type="dispatcher">/WEB-INF/pages/{1}/{2}.jsp</result>
 		</action>
+		<!-- 拦截器中指定了对app开头的请求不拦截 -->
+		<action name="app_*">
+			<result type="dispatcher">/WEB-INF/pages/app/{1}.jsp</result>
+		</action>
+		
+		<!-- 首页 -->
+		<action name="hfh_index_*" class="indexAction" method="{1}">
+			<result name="app_index">/WEB-INF/pages/app/index.jsp</result>
+			<result name="app_index_redirect" type="redirect">/hfh_index_index</result>
+			<result name="app_newinfo">/WEB-INF/pages/app/newinfo.jsp</result>
+			<result name="app_newlist">/WEB-INF/pages/app/newlist.jsp</result>
+			<result name="app_login">/WEB-INF/pages/app/login.jsp</result>
+			<result name="app_register">/WEB-INF/pages/app/register.jsp</result>
+		</action>
+		<!-- 志愿者首页 -->
+		<action name="hfh_volunteer_*" class="volunteerAction" method="{1}">
+			<result name="app_volunteer">/WEB-INF/pages/app/volunteer.jsp</result>
+			<result name="app_activityinfo">/WEB-INF/pages/app/activityinfo.jsp</result>
+		</action>
 		<!-- 用户管理 -->
 		<action name="userAction_*" class="userAction" method="{1}">
 			<result name="login">/login.jsp</result>

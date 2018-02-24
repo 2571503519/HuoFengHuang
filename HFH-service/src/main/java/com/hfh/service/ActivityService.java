@@ -27,5 +27,9 @@ public interface ActivityService {
 	List<ActivityVolunteer> listVolunteerById(Long act_id);
 
 	void approval(Long actVol_id);
+
+	List<Activity> findOnDoing(int count);
+
+	List<Activity> findWillDo(int count);
 	
 }

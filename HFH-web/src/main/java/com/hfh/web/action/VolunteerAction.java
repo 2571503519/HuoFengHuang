@@ -14,21 +14,27 @@ import org.springframework.stereotype.Controller;
 
 import com.hfh.domain.Activity;
 import com.hfh.domain.Volunteer;
+import com.hfh.service.ActivityService;
 import com.hfh.service.VolunteerService;
 import com.hfh.utils.MyConstant;
 import com.hfh.web.action.base.BaseAction;
+import com.opensymphony.xwork2.ActionContext;
 
 @Controller
 @Scope("prototype")
 public class VolunteerAction extends BaseAction<Volunteer> {
 	@Autowired
 	private VolunteerService volunteerService;
+	@Autowired
+	private ActivityService activityService;
 	// 属性驱动，批量删除时，由id组成的字符串 "1,2,3"
 	private String ids;
 	private String provinceTmp;
 	private String cityTmp;
 	private String countyTmp;
 	private String townTmp;
+	// 查询指定id的活动
+	private Long id;
 	
 	public void setIds(String ids) {
 		this.ids = ids;
@@ -48,6 +54,10 @@ public class VolunteerAction extends BaseAction<Volunteer> {
 
 	public void setTownTmp(String townTmp) {
 		this.townTmp = townTmp;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String pageQuery() {
@@ -133,4 +143,28 @@ public class VolunteerAction extends BaseAction<Volunteer> {
 		ServletActionContext.getResponse().getWriter().print(json);
 		return NONE;
 	}
+	
+	// 志愿者首页
+	public String volunteer() {
+		System.out.println("Volunteer Index");
+		
+		// 查询正在进行的活动
+		List<Activity> onDoingActivityList = activityService.findOnDoing(8);
+		// 查询将要进行的活动
+		List<Activity> willDoActivityList = activityService.findWillDo(8);
+		
+		ActionContext.getContext().put("onDoingActivityList", onDoingActivityList);
+		ActionContext.getContext().put("willDoActivityList", willDoActivityList);
+		
+		return "app_volunteer";
+	}
+	
+	public String activityDetail() {
+		
+		System.out.println(this.id + " - act_id");
+		Activity theActivity = activityService.findById(id);
+		ActionContext.getContext().put("theActivity", theActivity);
+		return "app_activityinfo";
+	}
+	
 }

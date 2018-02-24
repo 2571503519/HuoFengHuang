@@ -23,6 +23,7 @@ public class New {
 	
 	private Long new_id;
 	private String new_title;
+	private String new_desc;
 	private String new_content;
 	private String author;
 	private String source;
@@ -41,6 +42,12 @@ public class New {
 	}
 	public void setNew_title(String new_title) {
 		this.new_title = new_title;
+	}
+	public String getNew_desc() {
+		return new_desc;
+	}
+	public void setNew_desc(String new_desc) {
+		this.new_desc = new_desc;
 	}
 	public String getNew_content() {
 		return new_content;

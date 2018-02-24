@@ -1,5 +1,6 @@
 package com.hfh.service.impl;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -74,6 +75,18 @@ public class ActivityServiceImpl implements ActivityService {
 	@Override
 	public void approval(Long actVol_id) {
 		activityDao.executeUpdate("activityVolunteer.approval", actVol_id);
+	}
+
+	@Override
+	public List<Activity> findOnDoing(int count) {
+		Date currentDate = new Date();
+		return activityDao.findOnDoing(currentDate, count);
+	}
+
+	@Override
+	public List<Activity> findWillDo(int count) {
+		Date currentDate = new Date();
+		return activityDao.findWillDo(currentDate, count);
 	}
 
 

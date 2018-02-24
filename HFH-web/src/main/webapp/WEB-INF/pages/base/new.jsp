@@ -31,7 +31,6 @@
 <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
 <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
 <script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath }/ueditor/lang/zh-cn/zh-cn.js"></script>
-
 <style type="text/css">
     div{
         width:100%;
@@ -119,7 +118,8 @@
 		$('#newForm').form('submit', { 
 			url:"newAction_add.action", 
 			onSubmit: function(param){ 
-				param.new_content = new_content;			 
+				param.new_content = new_content;
+				return $(this).form("validate");
 			},
 			success: function(data) {
 				// {status: 0, error: "新闻的标题或内容不能为空！"}
@@ -143,7 +143,8 @@
 		$('#newEditForm').form('submit', { 
 			url:"newAction_edit.action", 
 			onSubmit: function(param){ 
-				param.new_content = new_content;			 
+				param.new_content = new_content;
+				return $(this).form("validate");
 			},
 			success: function(data) {
 				// {status: 0, error: "新闻的标题或内容不能为空！"}
@@ -197,8 +198,8 @@
 		width : 120,
 		align : 'center'
 	}, {
-		field : 'new_content',
-		title : '新闻内容',
+		field : 'new_desc',
+		title : '新闻描述',
 		width : 280,
 		align : 'left',
 		formatter: function(data, row, index) {
@@ -335,6 +336,10 @@
 						<td><input type="text" name="new_title" class="easyui-validatebox" required="true"/></td>
 					</tr>
 					<tr>
+						<td>新闻描述</td>
+						<td><textarea rows="5" cols="30" name="new_desc" class="easyui-validatebox" required="true"></textarea></td>
+					</tr>
+					<tr>
 						<td>新闻内容</td>
 						<td><script id="editor" type="text/plain" style="width:1024px;height:500px;"></script></td>
 					</tr>
@@ -367,6 +372,10 @@
 					<tr>
 						<td>新闻标题</td>
 						<td><input type="text" name="new_title" class="easyui-validatebox" required="true"/></td>
+					</tr>
+					<tr>
+						<td>新闻描述</td>
+						<td><textarea rows="5" cols="30" name="new_desc" class="easyui-validatebox" required="true"></textarea></td>
 					</tr>
 					<tr>
 						<td>新闻内容</td>

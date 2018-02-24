@@ -1,5 +1,7 @@
 package com.hfh.service;
 
+import java.util.List;
+
 import com.hfh.domain.New;
 import com.hfh.utils.PageBean;
 
@@ -21,5 +23,7 @@ public interface NewService {
 	New findById(Long new_id);
 
 	void update(New model);
+
+	List<New> findLatestNews();
 	
 }

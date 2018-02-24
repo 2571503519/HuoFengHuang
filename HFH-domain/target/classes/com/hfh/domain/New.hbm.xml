@@ -9,6 +9,7 @@
 			<generator class="native"/>			
 		</id>
 		<property name="new_title"/>
+		<property name="new_desc"/>
 		<property name="new_content"/>
 		<property name="author"/>
 		<property name="source"/>

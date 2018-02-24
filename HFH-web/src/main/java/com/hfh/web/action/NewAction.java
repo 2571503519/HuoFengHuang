@@ -1,7 +1,9 @@
 package com.hfh.web.action;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.ServletActionContext;
@@ -13,6 +15,7 @@ import com.hfh.domain.New;
 import com.hfh.service.NewService;
 import com.hfh.utils.MyConstant;
 import com.hfh.web.action.base.BaseAction;
+import com.opensymphony.xwork2.ActionContext;
 
 @Controller
 @Scope("prototype")
@@ -72,9 +75,10 @@ public class NewAction extends BaseAction<New> {
 		String error = null;
 		String json = null;
 		if (!StringUtils.isNotBlank(model.getNew_title()) 
-				|| !StringUtils.isNotBlank(model.getNew_content()) ) {
+				|| !StringUtils.isNotBlank(model.getNew_content())
+				|| !StringUtils.isNotBlank(model.getNew_desc())){
 			// 标题或内容为空，直接返回错误状态码和错误消息提示
-			error = "新闻的标题或内容不能为空！";
+			error = "新闻的标题、描述或内容不能为空！";
 			json = "{status:" + MyConstant.ADD_NEW_FAIL + ", error:" + "'" + error + "'" +"}";
 			ServletActionContext.getResponse().setContentType("text/json;charset=utf-8");
 			ServletActionContext.getResponse().getWriter().print(json);
@@ -93,9 +97,10 @@ public class NewAction extends BaseAction<New> {
 		String error = null;
 		String json = null;
 		if (!StringUtils.isNotBlank(model.getNew_title()) 
-				|| !StringUtils.isNotBlank(model.getNew_content()) ) {
+				|| !StringUtils.isNotBlank(model.getNew_content())
+				|| !StringUtils.isNotBlank(model.getNew_desc()) ){
 			// 标题或内容为空，直接返回错误状态码和错误消息提示
-			error = "新闻的标题或内容不能为空！";
+			error = "新闻的标题、描述或内容不能为空！";
 			json = "{status:" + MyConstant.ADD_NEW_FAIL + ", error:" + "'" + error + "'" +"}";
 			ServletActionContext.getResponse().setContentType("text/json;charset=utf-8");
 			ServletActionContext.getResponse().getWriter().print(json);
@@ -103,6 +108,7 @@ public class NewAction extends BaseAction<New> {
 		}
 		New n = newService.findById(model.getNew_id());
 		n.setNew_title(model.getNew_title());
+		n.setNew_desc(model.getNew_desc());
 		n.setNew_content(model.getNew_content());
 		n.setAuthor(model.getAuthor());
 		n.setSource(model.getSource());
@@ -114,7 +120,6 @@ public class NewAction extends BaseAction<New> {
 		ServletActionContext.getResponse().getWriter().print(json);
 		return NONE;
 	}
-	
 	
 	
 	
