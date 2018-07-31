@@ -25,6 +25,8 @@ public interface ActivityService {
 	void update(Activity model);
 	
 	List<ActivityVolunteer> listVolunteerById(Long act_id);
+	
+	void saveActivityVolunteer(ActivityVolunteer activityVolunteer);
 
 	void approval(Long actVol_id);
 

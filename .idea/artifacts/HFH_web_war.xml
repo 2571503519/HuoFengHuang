@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="HFH-web:war">
+    <output-path>$PROJECT_DIR$/HFH-web/target</output-path>
+    <root id="archive" name="HFH-web-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="HFH-web:war exploded" />
+    </root>
+  </artifact>
+</component>

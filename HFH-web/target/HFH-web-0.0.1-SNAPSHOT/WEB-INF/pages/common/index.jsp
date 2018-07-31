@@ -41,7 +41,7 @@
 			}
 		};
 		
-		// 基本功能菜单加载
+		// 基本功能菜单加载，这里将菜单数据都设置在静态的menu.json文件中了
 		$.ajax({
 			url : '${pageContext.request.contextPath}/json/menu.json',
 			type : 'POST',
@@ -84,8 +84,31 @@
 			$('#editPwdWindow').window('close');
 		});
 		
+		//为确定按钮绑定事件
 		$("#btnEp").click(function(){
-			alert("修改密码");
+			//进行表单校验
+			var v = $("#editPasswordForm").form("validate");
+			if(v){
+				//表单校验通过，手动校验两次输入是否一致
+				var v1 = $("#txtNewPass").val();
+				var v2 = $("#txtRePass").val();
+				if(v1 == v2){
+					//两次输入一致，发送ajax请求
+					$.post("adminAction_editPassword.action",{"password":v1},function(data){
+						if(data == '1'){
+							//修改成功，关闭修改密码窗口
+							$("#editPwdWindow").window("close");
+							$.messager.alert("提示信息", "密码修改成功！", "success");
+						}else{
+							//修改密码失败，弹出提示
+							$.messager.alert("提示信息","密码修改失败！","error");
+						}
+					});
+				}else{
+					//两次输入不一致，弹出错误提示
+					$.messager.alert("提示信息","两次密码输入不一致！","warning");
+				}
+			}
 		});
 	});
 
@@ -142,12 +165,13 @@
 		$.messager
 		.confirm('系统提示','您确定要退出本次登录吗?',function(isConfirm) {
 			if (isConfirm) {
-				location.href = '${pageContext.request.contextPath }/login.jsp';
+				location.href = '${pageContext.request.contextPath }/adminAction_logout.action';
 			}
 		});
 	}
 	// 修改密码
 	function editPassword() {
+		//打开修改密码窗口
 		$('#editPwdWindow').window('open');
 	}
 	// 版权信息
@@ -161,7 +185,7 @@
 		style="height:80px;padding:10px;background:url('./images/header_bg.png') no-repeat right;">
 		<div id="sessionInfoDiv"
 			style="position: absolute;right: 5px;top:10px;">
-			[<strong>超级管理员</strong>]，欢迎你！
+			[<strong>${loginedAdmin.username }</strong>]，欢迎你！
 		</div>
 		<div style="position: absolute; right: 5px; bottom: 10px; ">
 			<a href="javascript:void(0);" class="easyui-menubutton"
@@ -228,18 +252,21 @@
         background: #fafafa">
         <div class="easyui-layout" fit="true">
             <div region="center" border="false" style="padding: 10px; background: #fff; border: 1px solid #ccc;">
-                <table cellpadding=3>
-                    <tr>
-                        <td>新密码：</td>
-                        <td><input id="txtNewPass" type="Password" class="txt01" /></td>
-                    </tr>
-                    <tr>
-                        <td>确认密码：</td>
-                        <td><input id="txtRePass" type="Password" class="txt01" /></td>
-                    </tr>
-                </table>
+               <form id="editPasswordForm">
+	                <table cellpadding=3>
+	                    <tr>
+	                        <td>新密码：</td>
+	                        <td><input  required="true" data-options="validType:'length[4,10]'" id="txtNewPass" type="Password" class="txt01 easyui-validatebox" /></td>
+	                    </tr>
+	                    <tr>
+	                        <td>确认密码：</td>
+	                        <td><input required="true" data-options="validType:'length[4,10]'" id="txtRePass" type="Password" class="txt01 easyui-validatebox" /></td>
+	                    </tr>
+	                </table>
+               </form>
             </div>
             <div region="south" border="false" style="text-align: right; height: 30px; line-height: 30px;">
+            	<!-- 表单的提交在js代码中执行 -->
                 <a id="btnEp" class="easyui-linkbutton" icon="icon-ok" href="javascript:void(0)" >确定</a> 
                 <a id="btnCancel" class="easyui-linkbutton" icon="icon-cancel" href="javascript:void(0)">取消</a>
             </div>

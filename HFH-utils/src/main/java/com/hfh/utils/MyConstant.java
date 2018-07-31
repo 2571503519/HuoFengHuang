@@ -18,5 +18,7 @@ public class MyConstant {
 	public static final String ADD_NEW_FAIL = "0";
 	public static final int QUEST_TYPE_XUANZE = 1;
 	public static final int QUEST_TYPE_TIANKONG = 2;
-	
+	public static final int STATUS_FAIL = 0;
+	public static final int STATUS_SUCCESS = 1;
+	public static final int STATUS_OTHER = 9;
 }	

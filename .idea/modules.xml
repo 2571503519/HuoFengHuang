@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HFH-dao/HFH-dao.iml" filepath="$PROJECT_DIR$/HFH-dao/HFH-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HFH-domain/HFH-domain.iml" filepath="$PROJECT_DIR$/HFH-domain/HFH-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HFH-parent.iml" filepath="$PROJECT_DIR$/HFH-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HFH-service/HFH-service.iml" filepath="$PROJECT_DIR$/HFH-service/HFH-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HFH-utils/HFH-utils.iml" filepath="$PROJECT_DIR$/HFH-utils/HFH-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HFH-web/HFH-web.iml" filepath="$PROJECT_DIR$/HFH-web/HFH-web.iml" />
+    </modules>
+  </component>
+</project>

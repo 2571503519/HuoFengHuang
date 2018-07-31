@@ -17,6 +17,7 @@ import com.hfh.domain.User;
 import com.hfh.service.ActivityService;
 import com.hfh.service.NewService;
 import com.hfh.service.UserService;
+import com.hfh.utils.HFHUtils;
 import com.hfh.utils.MyConstant;
 import com.hfh.utils.PageBean;
 import com.opensymphony.xwork2.ActionContext;
@@ -94,6 +95,13 @@ public class IndexAction extends ActionSupport {
 			ActionContext.getContext().put("errorInfo", "用户名或密码错误！");
 			return "app_login";
 		}
+	}
+	
+	// 用户退出登录
+	public String logout() {
+		System.out.println("退出登录");
+		HFHUtils.getSession().invalidate();
+		return "app_index_redirect";
 	}
 	
 	// 用户注册

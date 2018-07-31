@@ -1,0 +1,146 @@
+	 body{
+	 	  /*background-color: lightgoldenrodyellow;*/
+	 }
+	 a:link,a:visited{
+          	text-decoration: none;
+            color: black;
+            }
+    #blue1{
+			background-color:#EBEBEB;
+			width: 100%;
+			height: 30px;
+			}
+    #blue2{
+    	    background-color:#EBEBEB;
+		    width: 100%;
+			height: 10px;	
+			}	  
+			
+	#personal{
+				background-color: lightgoldenrodyellow;
+		        padding-top: 8px;
+		        padding-bottom: 10px;
+		        text-align: center;
+			    width:100%;
+			    height: 40px;	
+			    border-bottom-width: 1px;
+		    	border-bottom-style: solid;
+		    	border-bottom-color: #ccc; 
+			  }
+	    
+    #user{						
+				background-color: lightgoldenrodyellow;
+				width: 100%;
+				height: 80px;
+				margin-top: 10px;
+			}
+		
+	#tu1{
+				height:50px;
+			    width: 50px;
+		        float: left;
+		        margin-top: 15px;
+		        margin-left: 20px;
+			}
+	#name{
+			margin-left: 90px;
+		    line-height: 15px;
+		    padding-top: 20px;
+		    width: 250px;
+		    height: 50px;
+		    }
+    #collect{
+		    	background-color: lightgoldenrodyellow;
+		    	border-bottom-width: 1px;
+		    	border-bottom-style: solid;
+		    	border-bottom-color: #ccc;
+		    	width: 100%;
+		    	height: 60px;   
+		    }
+    #tu2{
+				height:40px;
+			    width: 40px;
+		        float: left;
+		        margin-top: 10px;
+		        margin-left: 25px;
+		}
+	#browsed{
+		    	background-color: lightgoldenrodyellow;
+		    	border-bottom-width: 1px;
+		    	border-bottom-style: solid;
+		    	border-bottom-color: #ccc;
+		    	width: 100%;
+		    	height: 80px;
+		    	margin-top: 10px;
+		    }
+	#tu3{
+				height:40px;
+			    width: 40px;
+		        float: left;
+		        margin-top: 10px;
+		        margin-left: 25px;
+		 }
+    #testd{
+		    	background-color: lightgoldenrodyellow;
+		    	border-bottom-width: 1px;
+		    	border-bottom-style: solid;
+		    	border-bottom-color: #ccc;
+		    	width: 100%;
+		    	height: 80px;
+          }
+    #tu4{
+				height:40px;
+			    width: 40px;
+		        float: left;
+		        margin-top: 10px;
+		        margin-left: 25px;
+		}
+	#shezhi{
+		    	background-color: lightgoldenrodyellow;
+		    	border-bottom-width: 1px;
+		    	border-bottom-style: solid;
+		    	border-bottom-color: #ccc;
+		    	width: 100%;
+		    	height: 80px;
+		    }
+    #tu5{
+				height:40px;
+			    width: 48px;
+		        float: left;
+		        margin-top: 15px;
+		        margin-left: 20px;
+		}
+	#quit{
+		    	background-color:lightgoldenrodyellow;
+		    	border-bottom-width: 1px;
+		    	border-bottom-style: solid;
+		    	border-bottom-color: #ccc;
+		    	width: 100%;
+		    	height: 60px;
+		    }
+    #tu6{
+				height:40px;
+			    width: 40px;
+		        float: left;
+		        margin-top: 15px;
+		        margin-left: 24px;
+		}
+	
+	#td2{
+		    margin-left: 100px;
+		    line-height: 25px;
+		    padding-left: 80px;
+		    padding-top: 10px;
+		    width: 200px;
+		    height: 50px;
+	}
+	
+    #footer{	
+	width: 100%;
+	position: absolute;
+	position: fixed; 
+	bottom: 0px;
+	background-color: #EBEBEB; 
+	/*height: 40px;*/ 
+	text-align: center;
+}

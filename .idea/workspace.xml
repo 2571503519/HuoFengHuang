@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="HFH-web:war" />
+      <artifact name="HFH-web:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8eba95d1-f518-4a87-bf8e-22f82ea1c4a3" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/HFH-web/HFH-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/src/main/java/com/hfh/dao/ActivityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/src/main/java/com/hfh/dao/ActivityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/src/main/java/com/hfh/dao/VolunteerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/src/main/java/com/hfh/dao/VolunteerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/src/main/java/com/hfh/dao/impl/ActivityDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/src/main/java/com/hfh/dao/impl/ActivityDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/src/main/java/com/hfh/dao/impl/VolunteerDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/src/main/java/com/hfh/dao/impl/VolunteerDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/META-INF/maven/com.hfh/HFH-dao/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/META-INF/maven/com.hfh/HFH-dao/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/ActivityDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/ActivityDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/AdminDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/AdminDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/CandAnswerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/CandAnswerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/CandidateDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/CandidateDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/CommonSenseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/CommonSenseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/LawDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/LawDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/NewDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/NewDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/PaperExamDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/PaperExamDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/QuestionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/QuestionDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/QuestionExamDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/QuestionExamDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/VolunteerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/VolunteerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/base/BaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/base/BaseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/base/impl/BaseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/base/impl/BaseDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/ActivityDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/ActivityDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/AdminDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/AdminDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/CandAnswerDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/CandAnswerDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/CandidateDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/CandidateDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/CommonSenseImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/CommonSenseImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/LawDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/LawDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/NewDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/NewDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/PaperExamDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/PaperExamDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/QuestionDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/QuestionDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/QuestionExamDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/QuestionExamDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/VolunteerDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-dao/target/classes/com/hfh/dao/impl/VolunteerDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/src/main/java/com/hfh/domain/Activity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/src/main/java/com/hfh/domain/Activity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/META-INF/maven/com.hfh/HFH-domain/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/META-INF/maven/com.hfh/HFH-domain/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/Activity.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/Activity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/Activity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/Activity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/ActivityVolunteer.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/ActivityVolunteer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/CandAnswer.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/CandAnswer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/Candidate.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/Candidate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/CommonSense.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/CommonSense.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/ExamQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/ExamQuestion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/Law.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/Law.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/New.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/New.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/PaperExam.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/PaperExam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/QuestionExam.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/QuestionExam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/Volunteer.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-domain/target/classes/com/hfh/domain/Volunteer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/src/main/java/com/hfh/service/ActivityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/src/main/java/com/hfh/service/ActivityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/src/main/java/com/hfh/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/src/main/java/com/hfh/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/src/main/java/com/hfh/service/VolunteerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/src/main/java/com/hfh/service/VolunteerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/src/main/java/com/hfh/service/impl/ActivityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/src/main/java/com/hfh/service/impl/ActivityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/src/main/java/com/hfh/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/src/main/java/com/hfh/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/src/main/java/com/hfh/service/impl/VolunteerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/src/main/java/com/hfh/service/impl/VolunteerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/META-INF/maven/com.hfh/HFH-service/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/META-INF/maven/com.hfh/HFH-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/ActivityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/ActivityService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/AdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/CandidateService.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/CandidateService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/CommonSenseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/CommonSenseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/LawService.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/LawService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/NewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/NewService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/PaperExamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/PaperExamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/QuestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/QuestionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/VolunteerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/VolunteerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/ActivityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/ActivityServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/AdminServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/CandidateServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/CandidateServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/CommonSenseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/CommonSenseServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/LawServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/LawServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/NewServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/NewServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/PaperExamServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/PaperExamServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/QuestionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/QuestionServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/VolunteerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-service/target/classes/com/hfh/service/impl/VolunteerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-utils/src/main/java/com/hfh/utils/HFHUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-utils/src/main/java/com/hfh/utils/HFHUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-utils/src/main/java/com/hfh/utils/MyConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-utils/src/main/java/com/hfh/utils/MyConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-utils/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-utils/target/classes/META-INF/maven/com.hfh/HFH-utils/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-utils/target/classes/META-INF/maven/com.hfh/HFH-utils/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-utils/target/classes/com/hfh/utils/CandAnswerBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-utils/target/classes/com/hfh/utils/CandAnswerBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-utils/target/classes/com/hfh/utils/HFHUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-utils/target/classes/com/hfh/utils/HFHUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-utils/target/classes/com/hfh/utils/MD5Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-utils/target/classes/com/hfh/utils/MD5Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-utils/target/classes/com/hfh/utils/MyConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-utils/target/classes/com/hfh/utils/MyConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-utils/target/classes/com/hfh/utils/PageBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-utils/target/classes/com/hfh/utils/PageBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-utils/target/classes/com/hfh/utils/QuestionExamBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-utils/target/classes/com/hfh/utils/QuestionExamBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/src/main/java/com/hfh/web/action/VolunteerAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/src/main/java/com/hfh/web/action/VolunteerAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/src/main/java/com/hfh/web/action/app/IndexAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/src/main/java/com/hfh/web/action/app/IndexAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/src/main/webapp/WEB-INF/pages/app/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/src/main/webapp/WEB-INF/pages/app/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/src/main/webapp/WEB-INF/pages/app/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/src/main/webapp/WEB-INF/pages/app/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/src/main/webapp/WEB-INF/pages/app/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/src/main/webapp/WEB-INF/pages/app/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/src/main/webapp/WEB-INF/pages/app/volunteer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/src/main/webapp/WEB-INF/pages/app/volunteer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/src/main/webapp/css/appcss/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/src/main/webapp/css/appcss/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/classes/com/hfh/web/action/UserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/classes/com/hfh/web/action/UserAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/classes/com/hfh/web/action/base/BaseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/classes/com/hfh/web/action/base/BaseAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/classes/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/lib/HFH-dao-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/lib/HFH-dao-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/lib/HFH-domain-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/lib/HFH-domain-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/lib/HFH-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/lib/HFH-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/lib/HFH-utils-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/lib/HFH-utils-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/pages/common/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/pages/common/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/json/menu.json" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/json/menu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/validatecode.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT/validatecode.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/ActivityAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/ActivityAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/AdminAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/AdminAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/CandidateAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/CandidateAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/CommonSenseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/CommonSenseAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/LawAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/LawAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/NewAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/NewAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/PaperExamAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/PaperExamAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/QuestionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/QuestionAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/UserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/UserAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/VolunteerAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/VolunteerAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/app/IndexAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/app/IndexAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/base/BaseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/action/base/BaseAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/filter/UEditorFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/filter/UEditorFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/interceptor/HFHLoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/classes/com/hfh/web/interceptor/HFHLoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HFH-web/target/m2e-wtp/web-resources/META-INF/maven/com.hfh/HFH-web/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HFH-web/target/m2e-wtp/web-resources/META-INF/maven/com.hfh/HFH-web/pom.properties" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/HFH-dao/target/" />
+    <ignored path="$PROJECT_DIR$/HFH-service/target/" />
+    <ignored path="$PROJECT_DIR$/HFH-domain/target/" />
+    <ignored path="$PROJECT_DIR$/HFH-utils/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/HFH-web/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="db.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HFH-web/src/main/resources/db.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/HFH-domain/src/main/java/com/hfh/domain/Activity.hbm.xml" />
+        <option value="$PROJECT_DIR$/HFH-dao/src/test/java/com/hfh/dao/test/DBAccess.java" />
+        <option value="$PROJECT_DIR$/HFH-dao/src/test/java/com/hfh/dao/test/JdbcTest.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/workspace/Maven/apache-maven-3.3.9" />
+        <option name="userSettingsFile" value="D:\workspace\Maven\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="728" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="HFH-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HFH-parent" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/HFH-web/target/HFH-web-0.0.1-SNAPSHOT" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 7">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration name="JdbcTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hfh.dao.test.JdbcTest" />
+      <module name="HFH-dao" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_HFH-parent_2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="6982" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+    </configuration>
+    <configuration name="Tomcat 7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.82" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/HFH-web/" />
+      <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="HFH-web:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/HFH-web" />
+          </settings>
+        </artifact>
+        <artifact name="HFH-web:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_HFH-parent" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="6963" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.Tomcat 7" />
+      <item itemvalue="Application.JdbcTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JdbcTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3294893" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6408567" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27609682" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.88617885" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info id="Web" order="4" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6408567" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Spring" order="11" />
+      <window_info id="UI Designer" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3294893" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Messages" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/HFH-dao/src/test/java/com/hfh/dao/test/JdbcTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1519743707366" expanded="true" signature="621:683" ph="INSERT INTO user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-web/src/main/java/com/hfh/web/action/base/BaseAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3400">
+          <caret line="170" column="8" lean-forward="true" selection-start-line="170" selection-start-column="8" selection-end-line="170" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-dao/src/test/java/com/hfh/dao/test/JdbcTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1519743707366" expanded="true" signature="621:683" ph="INSERT INTO user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-web/src/main/java/com/hfh/web/action/base/BaseAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3360">
+          <caret line="168" column="34" lean-forward="true" selection-start-line="168" selection-start-column="34" selection-end-line="168" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-dao/src/test/java/com/hfh/dao/test/JdbcTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1519743707366" expanded="true" signature="621:683" ph="INSERT INTO user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-dao/src/test/java/com/hfh/dao/test/JdbcTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1519743707366" expanded="true" signature="621:683" ph="INSERT INTO user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-dao/src/test/java/com/hfh/dao/test/JdbcTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1519743707366" expanded="true" signature="621:683" ph="INSERT INTO user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-web/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-domain/src/main/java/com/hfh/domain/Activity.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-dao/src/test/java/com/hfh/dao/test/DBAccess.java" />
+    <entry file="file://$PROJECT_DIR$/HFH-web/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-domain/src/main/java/com/hfh/domain/Activity.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-dao/src/test/java/com/hfh/dao/test/DBAccess.java" />
+    <entry file="file://$PROJECT_DIR$/HFH-domain/src/main/java/com/hfh/domain/Admin.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-domain/src/main/java/com/hfh/domain/ActivityVolunteer.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-domain/src/main/java/com/hfh/domain/Activity.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-dao/src/test/java/com/hfh/dao/test/DBAccess.java" />
+    <entry file="file://$PROJECT_DIR$/HFH-web/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-web/src/main/java/com/hfh/web/action/VolunteerAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-780">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="170" column="8" lean-forward="true" selection-start-line="170" selection-start-column="8" selection-end-line="170" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-web/src/main/java/com/hfh/web/action/base/BaseAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-dao/src/test/java/com/hfh/dao/test/JdbcTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1519743707366" expanded="true" signature="621:683" ph="INSERT INTO user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HFH-web/src/main/resources/db.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>HFH-web:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web (HFH-web)|Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring|HFH-web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

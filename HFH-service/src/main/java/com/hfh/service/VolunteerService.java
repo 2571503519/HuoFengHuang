@@ -18,5 +18,7 @@ public interface VolunteerService {
 	Volunteer findById(Long vol_id);
 
 	void update(Volunteer model);
+
+	Long saveAndReturnId(Volunteer model);
 	
 }

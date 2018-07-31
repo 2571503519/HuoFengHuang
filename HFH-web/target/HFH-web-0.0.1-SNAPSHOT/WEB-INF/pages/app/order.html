@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <base href="<%=basePath%>">
+    <title>我的订单</title>
+    <link type="text/css" href="../css/css1.css" rel="stylesheet" />
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/js.js"></script>
+    <style>
+	   	tr td,tr th{
+	   		border:1px solid #000;
+	   		text-align:center;
+	   	}
+    </style>
+</head>
+<body>
+<div class="header">
+        <h1 class="logo">
+            <a href="index.html"></a>
+        </h1>
+    </div>
+    <!--header/-->
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">网站首页</a></li>
+            <li><a href="zhiyuanzhe.html">志愿者</a></li>
+            <li class="aHover"><a href="fireShop.html">凤凰通宝</a></li>
+            <li><a href="peiXun.html">培训考试</a></li>
+            <li><a href="gongsi.html">公司简介</a></li>
+            <div class="clears"></div>
+            <div class="log">
+                <a href="./logoin.html" class="login" type="button">登 录 </a>
+                <div class="shuxian"></div>
+                <a href="./reg.html" class="reg" type="button"> 注 册</a>
+            </div>
+            <div class="clears"></div>
+        </ul>
+    </div>
+    <div class="insideCont">
+        <div class="time">
+            <span>2017年10月02日14:06:40</span>
+            <form action="#" method="get" id="search">
+                <div class="search">
+                    <input type="text" class="seaLeft" />
+                    <input type="image" src="../images/inRight.jpg" class="seaRight" />
+                </div>
+                <!--search/-->
+            </form>
+            <!--select/-->
+        </div>
+	
+    <div class="new1Box">
+        <div class="insideVideo">
+            <h1 class="video1Title"><span>订单信息</span></h1>
+            <div class="span24">
+			<table style="margin-top: 15px;margin-left: 10px;">
+				<thead>
+					<tr>
+						<th colspan="5">订单编号:<s:property value="model.order_id"/>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+					</tr>
+					<tr>
+						<th>图片</th>
+						<th>商品</th>
+						<th>价格</th>
+						<th>数量</th>
+						<th>小计</th>
+					</tr>
+				</thead>
+				<tbody>
+					<s:iterator var="orderItem" value="model.orderItems">					
+					<tr>
+						<td width="130px" height="100px">
+							<img src="${ pageContext.request.contextPath }/<s:property value="#orderItem.product.image"/>"/>
+						</td>
+						<td width="350px">
+							<s:property value="#orderItem.product.pro_name"/>
+						</td>
+						<td width="150px">
+							<s:property value="#orderItem.product.price"/>
+						</td>
+						<td class="quantity" width="90px">
+							<s:property value="#orderItem.count"/>
+						</td>
+						<td width="120px">
+							<span class="subtotal">￥<s:property value="#orderItem.subtotal"/></span>
+						</td>							
+					</tr>
+				</s:iterator>
+			</tbody>
+		</table>
+		
+		<dl id="giftItems" class="hidden" style="display: none;"></dl>
+		<div class="total" style="margin-left: 10px;">
+			<em id="promotion"></em>
+			商品金额: <strong id="effectivePrice">￥<s:property value="model.total"/>元</strong>
+		</div>
+		<form id="orderForm" action="${ pageContext.request.contextPath }/order_payOrder.action" method="post">
+			<input type="hidden" name="order_id" value="<s:property value="model.order_id"/> />
+			<div class="span24" style="margin-left: 10px;margin-top: -10px;">
+				<p>
+					收货地址：<input name="addr" type="text" value="" style="width:350px" />
+						<br />
+					收货人&nbsp;： <input name="name" type="text" value="<s:property value="model.user.nickname"/>" style="width:150px" />
+						<br /> 
+					联系方式：<input name="tel" type="text" value="<s:property value="model.user.tel"/>" style="width:150px" />
+
+				</p>
+				<hr />
+					<p>选择支付方式：<br/>
+						<input type="radio" name="pd_FrpId" value="ICBC-NET-B2C" checked="checked"/>易付宝
+					</p>
+				<hr />
+				<p style="text-align:right">
+					<a href="javascript:document.getElementById('orderForm').submit();">
+						<button>提交订单</button>
+					</a>
+				</p>
+			</div>
+		</form>
+	</div>
+	</div>
+	<div class="clears"></div>
+	</div>
+</div>
+
+	<div class="footer">
+            <div class="footNav">
+                <a href="index.html">网站首页</a> -
+                <a href="new.html">新闻中心</a> -
+                <a href="zhenggong.html">政工指示</a> -
+                <a href="edu.html">教育专栏</a> -
+                <a href="xinli.html">心理工作</a> -
+                <a href="jingying.html">警营文化</a> -
+                <a href="gongxiang.html">共享磁盘</a> -
+                <a href="sp_index.html">支队主页</a>
+            </div>
+            <!--footNav-->
+            <div class="footBottom">
+                <ul class="footLogo">
+                    <li>
+                        <a href="#"><img src="../images/footerlogo1.jpg" width="124" height="44" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/footerlogo2.jpg" width="124" height="44" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/footerlogo3.jpg" width="124" height="44" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/footerlogo4.jpg" width="124" height="44" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/footerlogo1.jpg" width="124" height="44" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/footerlogo2.jpg" width="124" height="44" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/footerlogo3.jpg" width="124" height="44" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/footerlogo4.jpg" width="124" height="44" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/footerlogo1.jpg" width="124" height="44" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/footerlogo2.jpg" width="124" height="44" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/footerlogo3.jpg" width="124" height="44" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/footerlogo4.jpg" width="124" height="44" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/footerlogo1.jpg" width="124" height="44" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/footerlogo2.jpg" width="124" height="44" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/footerlogo3.jpg" width="124" height="44" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/footerlogo4.jpg" width="124" height="44" /></a>
+                    </li>
+                    <div class="clears"></div>
+                </ul>
+                <!--footLogo/-->
+                <p>Copyright 2017 湛江市公安消防支队,All right Reserved 版权所有</p>
+                <p>未经本网书面授权，请勿转载、摘编或建立镜像，负责视为侵权。 </p>
+                <p>粤ICP备0000000号 技术支持：<a href="#" target="_blank">湛江TC网络科技集团</a></p>
+            </div>
+            <!--footBottom/-->
+        </div>
+        <!--footer/-->
+</body>
+
+</html>

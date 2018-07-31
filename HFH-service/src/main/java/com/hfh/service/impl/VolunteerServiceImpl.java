@@ -61,5 +61,10 @@ public class VolunteerServiceImpl implements VolunteerService {
 		volunteerDao.update(model);
 	}
 
+	@Override
+	public Long saveAndReturnId(Volunteer model) {
+		return volunteerDao.saveAndReturnId(model);
+	}
+
 
 }

@@ -8,15 +8,107 @@
 		<constant name="struts.objectFactory" value="spring"/>
 	 -->
 	<package name="basicstruts2" extends="struts-default">
+		<interceptors>
+			<!-- 注册自己的拦截器 -->
+			<interceptor name="hfhLoginInterceptor" class="com.hfh.web.interceptor.HFHLoginInterceptor">
+				<!-- 指定不拦截的方法 -->
+				<param name="excludeMethods">login</param>
+			</interceptor>
+			<!-- 自定义拦截器栈 -->
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="hfhLoginInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<!-- 指定默认拦截器栈 -->
+		<default-interceptor-ref name="myStack"></default-interceptor-ref>
+		<!-- 全局结果集定义 -->
+		<global-results>
+			<result name="login">/login.jsp</result>
+		</global-results>
+		
+		
 		<!-- 需要进行权限控制的页面访问 -->
 		<action name="page_*_*">
 			<result type="dispatcher">/WEB-INF/pages/{1}/{2}.jsp</result>
 		</action>
+		<!-- 拦截器中指定了对app开头的请求不拦截 -->
+		<action name="app_*">
+			<result type="dispatcher">/WEB-INF/pages/app/{1}.jsp</result>
+		</action>
 		
+		<!-- 首页 -->
+		<action name="hfh_index_*" class="indexAction" method="{1}">
+			<result name="app_index">/WEB-INF/pages/app/index.jsp</result>
+			<result name="app_index_redirect" type="redirect">/hfh_index_index</result>
+			<result name="app_newinfo">/WEB-INF/pages/app/newinfo.jsp</result>
+			<result name="app_newlist">/WEB-INF/pages/app/newlist.jsp</result>
+			<result name="app_login">/WEB-INF/pages/app/login.jsp</result>
+			<result name="app_register">/WEB-INF/pages/app/register.jsp</result>
+		</action>
+		<!-- 志愿者首页 -->
+		<action name="hfh_volunteer_*" class="volunteerAction" method="{1}">
+			<result name="app_volunteer">/WEB-INF/pages/app/volunteer.jsp</result>
+			<result name="app_activityinfo">/WEB-INF/pages/app/activityinfo.jsp</result>
+		</action>
 		<!-- 用户管理 -->
 		<action name="userAction_*" class="userAction" method="{1}">
 			<result name="login">/login.jsp</result>
 			<result name="home">/index.jsp</result>
+		</action>
+		<!-- 管理员管理 -->
+		<action name="adminAction_*" class="adminAction" method="{1}">
+			<result name="login">/login.jsp</result>
+			<result name="home">/index.jsp</result>
+			<result name="list">/page_base_admin</result>
+		</action>
+		<!-- 新闻管理 -->
+		<action name="newAction_*" class="newAction" method="{1}">
+			<result name="login">/login.jsp</result>
+			<result name="home">/index.jsp</result>
+			<result name="list">/page_base_new</result>
+		</action>
+		<!-- 消防常识管理 -->
+		<action name="commonSenseAction_*" class="commonSenseAction" method="{1}">
+			<result name="login">/login.jsp</result>
+			<result name="home">/index.jsp</result>
+			<result name="list">/page_base_common_sense</result>
+		</action>
+		<!-- 消防法规管理 -->
+		<action name="lawAction_*" class="lawAction" method="{1}">
+			<result name="login">/login.jsp</result>
+			<result name="home">/index.jsp</result>
+			<result name="list">/page_base_law</result>
+		</action>
+		<!-- 活动管理 -->
+		<action name="activityAction_*" class="activityAction" method="{1}">
+			<result name="login">/login.jsp</result>
+			<result name="home">/index.jsp</result>
+			<result name="list">/page_base_activity</result>
+		</action>
+		<!-- 志愿者管理 -->
+		<action name="volunteerAction_*" class="volunteerAction" method="{1}">
+			<result name="login">/login.jsp</result>
+			<result name="home">/index.jsp</result>
+			<result name="list">/page_base_volunteer</result>
+		</action>
+		<!-- 题库管理 -->
+		<action name="questionAction_*" class="questionAction" method="{1}">
+			<result name="login">/login.jsp</result>
+			<result name="home">/index.jsp</result>
+			<result name="list">/page_exam_question</result>
+		</action>
+		<!-- 考卷管理 -->
+		<action name="paperExamAction_*" class="paperExamAction" method="{1}">
+			<result name="login">/login.jsp</result>
+			<result name="home">/index.jsp</result>
+			<result name="list">/page_exam_paperExam</result>
+		</action>
+		<!-- 考生管理 -->
+		<action name="candidateAction_*" class="candidateAction" method="{1}">
+			<result name="login">/login.jsp</result>
+			<result name="home">/index.jsp</result>
+			<result name="list">/page_exam_candidate</result>
 		</action>
 	</package>
 </struts>

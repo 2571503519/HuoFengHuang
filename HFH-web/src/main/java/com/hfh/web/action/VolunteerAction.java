@@ -6,6 +6,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +15,15 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import com.hfh.domain.Activity;
+import com.hfh.domain.ActivityVolunteer;
+import com.hfh.domain.User;
 import com.hfh.domain.Volunteer;
 import com.hfh.service.ActivityService;
+import com.hfh.service.UserService;
 import com.hfh.service.VolunteerService;
+import com.hfh.utils.HFHUtils;
 import com.hfh.utils.MyConstant;
+import com.hfh.utils.StatusBean;
 import com.hfh.web.action.base.BaseAction;
 import com.opensymphony.xwork2.ActionContext;
 
@@ -27,39 +34,19 @@ public class VolunteerAction extends BaseAction<Volunteer> {
 	private VolunteerService volunteerService;
 	@Autowired
 	private ActivityService activityService;
+	@Autowired
+	private UserService userService;
 	// 属性驱动，批量删除时，由id组成的字符串 "1,2,3"
 	private String ids;
 	private String provinceTmp;
 	private String cityTmp;
 	private String countyTmp;
 	private String townTmp;
+	private String user_tel;
+	private String user_email;
 	// 查询指定id的活动
 	private Long id;
 	
-	public void setIds(String ids) {
-		this.ids = ids;
-	}
-	
-	public void setProvinceTmp(String provinceTmp) {
-		this.provinceTmp = provinceTmp;
-	}
-
-	public void setCityTmp(String cityTmp) {
-		this.cityTmp = cityTmp;
-	}
-
-	public void setCountyTmp(String countyTmp) {
-		this.countyTmp = countyTmp;
-	}
-
-	public void setTownTmp(String townTmp) {
-		this.townTmp = townTmp;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
 	public String pageQuery() {
 		volunteerService.pageQuery(this.pageBean);
 		// 将pageBean转换成json数据，设置到responce中返回给浏览器
@@ -158,7 +145,7 @@ public class VolunteerAction extends BaseAction<Volunteer> {
 		
 		return "app_volunteer";
 	}
-	
+	// 活动详情
 	public String activityDetail() {
 		
 		System.out.println(this.id + " - act_id");
@@ -167,4 +154,96 @@ public class VolunteerAction extends BaseAction<Volunteer> {
 		return "app_activityinfo";
 	}
 	
+	// 申请成为志愿者
+	public String volunteerApply() {
+		StatusBean statusBean = new StatusBean();
+		// TODO: 参数校验
+		System.out.println(model.getVol_name());
+		System.out.println(model.getVol_IDCard());
+		// 判断用户是否登录
+		User loginedUser = (User) ServletActionContext.getRequest().getSession()
+				.getAttribute(MyConstant.LOGINED_USER);
+		if (loginedUser == null) {
+			statusBean.setError("请先登录！");
+			statusBean.setUrl(HFHUtils.getAbsolutePath() + "/app_login");
+		} else {
+			// 重新查询，防止用户信息已经更新
+			loginedUser = userService.findById(loginedUser.getUser_id());
+			if (loginedUser.getVol_id() != null) {
+				statusBean.setError("您已经是志愿者！请勿重复申请。");
+			} else {
+				Long volId = volunteerService.saveAndReturnId(model);
+			}
+		}
+		return NONE;
+	}
+	
+	// 活动申请
+	public String apply() throws IOException {
+		System.out.println(this.id); // 活动的id
+		StatusBean statusBean = new StatusBean();
+		Activity activity = null;
+		Volunteer volunteer = null;
+		// 判断用户是否登录
+		User loginedUser = (User) ServletActionContext.getRequest().getSession()
+				.getAttribute(MyConstant.LOGINED_USER);
+		if (loginedUser == null) {
+			statusBean.setError("请先登录！");
+			statusBean.setUrl(HFHUtils.getAbsolutePath() + "/app_login");
+		} else if (loginedUser.getVol_id() == null) {
+			statusBean.setError("您目前还不是志愿者！请申请成为志愿者后再申请参加活动。");
+		} else {
+			activity = activityService.findById(this.id);
+			volunteer = volunteerService.findById(loginedUser.getVol_id());
+			if (activity == null) {
+				statusBean.setError("无相关活动！");
+			} else if (volunteer == null) {
+				statusBean.setError("志愿者不存在！");
+			}
+		}
+		if (statusBean.getError() != null)
+			statusBean.setStatus(MyConstant.STATUS_FAIL);
+		else {
+			// 向act_vol表中添加记录
+			ActivityVolunteer activityVolunteer = new ActivityVolunteer();
+			activityVolunteer.setActivity(activity);
+			activityVolunteer.setVolunteer(volunteer);
+			activityVolunteer.setCreate_time(new Date());
+			activityVolunteer.setStatus(0);
+			activityService.saveActivityVolunteer(activityVolunteer);
+			statusBean.setStatus(MyConstant.STATUS_SUCCESS);
+		}
+		this.java2Json(statusBean, new String[] {});
+		return NONE;
+	}
+	
+	public void setIds(String ids) {
+		this.ids = ids;
+	}
+	
+	public void setProvinceTmp(String provinceTmp) {
+		this.provinceTmp = provinceTmp;
+	}
+
+	public void setCityTmp(String cityTmp) {
+		this.cityTmp = cityTmp;
+	}
+
+	public void setCountyTmp(String countyTmp) {
+		this.countyTmp = countyTmp;
+	}
+
+	public void setTownTmp(String townTmp) {
+		this.townTmp = townTmp;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public void setUser_tel(String user_tel) {
+		this.user_tel = user_tel;
+	}
+	public void setUser_email(String user_email) {
+		this.user_email = user_email;
+	}
 }

@@ -13,6 +13,8 @@ public interface ActivityDao extends BaseDao<Activity>{
 	
 	List<ActivityVolunteer> listVolunteer(Long act_id);
 
+	void saveActivityVolunteer(ActivityVolunteer activityVolunteer);
+	
 	List<Activity> findOnDoing(Date currentDate, int count);
 
 	List<Activity> findWillDo(Date currentDate, int count);

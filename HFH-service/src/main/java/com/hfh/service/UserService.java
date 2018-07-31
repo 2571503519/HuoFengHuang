@@ -16,5 +16,7 @@ public interface UserService {
 	User login(User user);
 
 	int register(User user);
+
+	User findById(Long user_id);
 	
 }

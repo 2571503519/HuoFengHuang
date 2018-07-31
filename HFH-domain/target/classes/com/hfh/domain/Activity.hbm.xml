@@ -24,6 +24,15 @@
 			<one-to-many class="com.hfh.domain.ActivityVolunteer"></one-to-many>
 		</set>
 	</class>
+	<class name="com.hfh.domain.ActivityVolunteer" table="act_vol">
+		<id name="id" type="java.lang.Long">
+			<generator class="native"/>
+		</id>
+		<property name="create_time"/>
+		<property name="status"/>
+		<many-to-one lazy="false" name="volunteer" class="com.hfh.domain.Volunteer" column="vol_id"></many-to-one>
+		<many-to-one lazy="false" name="activity" class="com.hfh.domain.Activity" column="act_id"></many-to-one>
+	</class>
 	<query name="activity.publish">
 		UPDATE Activity a SET a.status = 1 WHERE a.act_id = ?
 	</query>

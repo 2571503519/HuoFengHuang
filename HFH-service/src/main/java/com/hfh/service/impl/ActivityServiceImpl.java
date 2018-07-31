@@ -89,5 +89,10 @@ public class ActivityServiceImpl implements ActivityService {
 		return activityDao.findWillDo(currentDate, count);
 	}
 
+	@Override
+	public void saveActivityVolunteer(ActivityVolunteer activityVolunteer) {
+		activityDao.saveActivityVolunteer(activityVolunteer);
+	}
+
 
 }

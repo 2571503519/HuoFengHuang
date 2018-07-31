@@ -22,6 +22,11 @@ public class ActivityDaoImpl extends BaseDaoImpl<Activity> implements ActivityDa
 		List<ActivityVolunteer> list = (List<ActivityVolunteer>) this.getHibernateTemplate().find(hql, act_id);
 		return list;
 	}
+	
+	@Override
+	public void saveActivityVolunteer(ActivityVolunteer activityVolunteer) {
+		this.getHibernateTemplate().save(activityVolunteer);
+	}
 
 	@SuppressWarnings("unchecked")
 	@Override
